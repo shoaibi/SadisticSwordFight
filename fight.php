@@ -4,8 +4,8 @@
  *  A number of samurai wearing numbered T-shirts are sitting in a circle.
  *  There is 1 sword, handed to samurai wearing shirt # 1.
  *  Each samurai has taken a blood oath to kill the samurai sitting behind him and
- *  pass the sword on to one sitting behind the killed one.
- *  Game goes one till there is only one survivor.
+ *  pass the sword onto one sitting behind the killed one.
+ *  Game goes on till there is only one survivor.
  */
 
 // TODO: Add Strict Validation
