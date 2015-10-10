@@ -68,6 +68,7 @@ class SadisticSwordFight {
 
   public function fight() {
     $samurai = $this->samuraiCircle->first;
+    // the first part of condition is not really needed as it is a circular linked list. should probably remove it.
     while ($samurai->next && $samurai->next != $samurai) {
       //echo $samurai->shirtNumber . " kills " . $samurai->next->shirtNumber . " and hands to " . $samurai->next->next->shirtNumber . PHP_EOL;
       $samuraiToDelete  = $samurai->next;
