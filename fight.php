@@ -35,15 +35,16 @@ class SamuraiCircle {
   }
 
   public function add($shirtNumber) {
-    $samurai           = new Samurai($shirtNumber);
-    $samurai->next     = $this->first;
-
+    $samurai                = new Samurai($shirtNumber);
+    
     if (!$this->first) {
-      $this->current  = $this->first  = & $samurai;
+      $this->current        = $this->first  = & $samurai;
     } else {
       $this->current->next  = & $samurai;
       $this->current        = $samurai;
     }
+    
+    $this->current->next    = $this->first;
   }
 }
 
@@ -68,8 +69,7 @@ class SadisticSwordFight {
 
   public function fight() {
     $samurai = $this->samuraiCircle->first;
-    // the first part of condition is not really needed as it is a circular linked list. should probably remove it.
-    while ($samurai->next && $samurai->next != $samurai) {
+    while ($samurai->next != $samurai) {
       //echo $samurai->shirtNumber . " kills " . $samurai->next->shirtNumber . " and hands to " . $samurai->next->next->shirtNumber . PHP_EOL;
       $samuraiToDelete  = $samurai->next;
       $samurai->next    = $samuraiToDelete->next;
